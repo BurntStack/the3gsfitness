@@ -129,7 +129,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
           <img
             src="/hero/new-dark-athlete.png"
             alt="Athlete — The 3Gs Fitness"
-            className="relative h-[80vh] max-h-[750px] w-auto object-contain select-none mb-0 md:mb-4 lg:mb-6 mr-4 md:mr-8 lg:mr-12 -translate-x-[10%]"
+            className="relative h-[60vh] md:h-[80vh] max-h-[750px] w-auto object-contain select-none mb-0 md:mb-4 lg:mb-6 -mr-8 md:mr-8 lg:mr-12 opacity-40 md:opacity-100 translate-x-4 md:-translate-x-[10%]"
             style={{
               filter: 'drop-shadow(-20px 30px 45px rgba(0,0,0,0.85)) contrast(1.06) brightness(1.02)',
               imageRendering: '-webkit-optimize-contrast',
@@ -138,13 +138,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
         </div>
 
         {/* ── CONTENT LAYER ── */}
-        <div className="relative z-[10] flex flex-col justify-between flex-1 px-8 md:px-14 lg:px-20 pb-20 lg:pb-24 pt-8">
+        <div className="relative z-[10] flex flex-col md:justify-between flex-1 px-6 md:px-14 lg:px-20 pb-12 md:pb-24 pt-24 md:pt-8">
 
-          {/* Top spacer */}
-          <div />
+          {/* Top spacer (hidden on mobile to reduce top black space) */}
+          <div className="hidden md:block" />
 
           {/* Bottom: two-column layout */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mt-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 md:mt-auto">
 
             {/* Bottom-Left: Headline + CTAs */}
             <div className="max-w-md space-y-5">
