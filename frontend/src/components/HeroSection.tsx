@@ -286,7 +286,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
         <img
           src="/hero/new-dark-athlete.png"
           alt="Athlete — The 3Gs Fitness"
-          className="relative h-[80vh] max-h-[750px] w-auto object-contain select-none mb-0 md:mb-4 lg:mb-6 mr-4 md:mr-8 lg:mr-12 -translate-x-[10%] transition-transform duration-700 hover:scale-[1.02]"
+          className="relative h-[60vh] md:h-[80vh] max-h-[750px] w-auto object-contain object-bottom md:object-right-bottom select-none mb-0 md:mb-4 lg:mb-6 mr-0 md:mr-8 lg:mr-12 opacity-40 md:opacity-100 translate-x-0 md:-translate-x-[10%] transition-transform duration-700 hover:scale-[1.02]"
           style={{
             filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.18)) contrast(1.06) brightness(1.02)',
             imageRendering: '-webkit-optimize-contrast',
@@ -298,10 +298,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
       </div>
 
       {/* ── CONTENT LAYER ── */}
-      <div className="relative z-[10] flex flex-col justify-between flex-1 px-8 md:px-14 lg:px-20 pb-20 lg:pb-24 pt-8">
+      <div className="relative z-[10] flex flex-col md:justify-between flex-1 px-6 md:px-14 lg:px-20 pb-12 md:pb-24 pt-24 md:pt-8">
 
-        {/* Top spacer */}
-        <div />
+        {/* Top spacer (hidden on mobile to reduce top black space) */}
+        <div className="hidden md:block" />
 
         {/* Bottom: two-column layout */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mt-auto">
@@ -310,15 +310,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
           <div className="max-w-md space-y-5">
             <div className="space-y-0">
               <h1 className="font-display font-black uppercase leading-[0.95] text-neutral-900"
-                style={{ fontSize: 'clamp(42px, 6vw, 80px)' }}>
+                style={{ fontSize: 'clamp(34px, 9vw, 80px)' }}>
                 TRAIN INSANE
               </h1>
               <h1 className="font-display font-black uppercase leading-[0.95] text-[#ff5520] drop-shadow-[0_4px_24px_rgba(255,85,32,0.25)]"
-                style={{ fontSize: 'clamp(42px, 6vw, 80px)' }}>
+                style={{ fontSize: 'clamp(34px, 9vw, 80px)' }}>
                 OR REMAIN
               </h1>
               <h1 className="font-display font-black uppercase leading-[0.95] text-neutral-900"
-                style={{ fontSize: 'clamp(42px, 6vw, 80px)' }}>
+                style={{ fontSize: 'clamp(34px, 9vw, 80px)' }}>
                 THE SAME!
               </h1>
             </div>
@@ -327,16 +327,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
               Join The 3Gs Fitness and experience world-class training with three generations of expert coaching. Unlock your potential, break your limits.
             </p>
 
-            <div className="flex flex-wrap gap-3 pt-1">
+            <div className="flex flex-row gap-3 pt-1 w-full max-w-[400px]">
               <button
                 onClick={onExploreMore}
-                className="px-7 py-3.5 rounded-none bg-[#ff5520] hover:bg-[#e04414] text-white text-xs font-black uppercase tracking-[0.15em] shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105 active:scale-98 transition-all cursor-pointer"
+                className="flex-1 px-2 sm:px-7 py-3.5 rounded-none bg-[#ff5520] hover:bg-[#e04414] text-white text-[10px] sm:text-xs font-black uppercase tracking-[0.15em] shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105 active:scale-98 transition-all cursor-pointer text-center"
               >
                 SEE PLANS
               </button>
               <button
                 onClick={scrollToCoaches}
-                className="px-7 py-3.5 rounded-none border border-neutral-300 hover:border-neutral-400 bg-white/50 hover:bg-white text-neutral-800 text-xs font-black uppercase tracking-[0.15em] transition-all cursor-pointer"
+                className="flex-1 px-2 sm:px-7 py-3.5 rounded-none border border-neutral-300 hover:border-neutral-400 bg-white/50 hover:bg-white text-neutral-800 text-[10px] sm:text-xs font-black uppercase tracking-[0.15em] transition-all cursor-pointer text-center"
               >
                 OUR COACHES
               </button>
