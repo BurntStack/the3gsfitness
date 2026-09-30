@@ -21,7 +21,7 @@ export const The3gsLogo: React.FC<LogoProps> = ({
       />
       {/* Brand Name Typography */}
       <span
-        className={`font-display text-lg sm:text-xl md:text-2xl font-black tracking-tight uppercase transition-colors whitespace-nowrap overflow-hidden text-ellipsis ${
+        className={`font-display text-[15px] sm:text-xl md:text-2xl font-black tracking-tight uppercase transition-colors whitespace-nowrap overflow-hidden text-ellipsis ${
           isDark ? 'text-white' : 'text-neutral-900'
         } ${textClassName || ''}`}
       >
