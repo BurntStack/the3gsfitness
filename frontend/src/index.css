@@ -6,7 +6,7 @@
     --font-display: 'Syne', sans-serif;
   }
 
-  body {
+  html, body {
     font-family: var(--font-sans);
     color: #141414;
     background-color: #fafafa;
