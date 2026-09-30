@@ -129,7 +129,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
           <img
             src="/hero/new-dark-athlete.png"
             alt="Athlete — The 3Gs Fitness"
-            className="relative h-[60vh] md:h-[80vh] max-h-[750px] w-auto object-contain select-none mb-0 md:mb-4 lg:mb-6 mr-0 md:mr-8 lg:mr-12 opacity-40 md:opacity-100 -translate-x-6 md:-translate-x-[10%]"
+            className="relative h-[60vh] md:h-[80vh] max-h-[750px] w-auto object-contain select-none mb-0 md:mb-4 lg:mb-6 mr-0 md:mr-8 lg:mr-12 opacity-40 md:opacity-100 translate-x-0 md:-translate-x-[10%]"
             style={{
               filter: 'drop-shadow(-20px 30px 45px rgba(0,0,0,0.85)) contrast(1.06) brightness(1.02)',
               imageRendering: '-webkit-optimize-contrast',
