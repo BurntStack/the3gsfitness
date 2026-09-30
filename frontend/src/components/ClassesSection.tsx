@@ -86,7 +86,7 @@ export const ClassesSection: React.FC<ClassesSectionProps> = ({ onSelectClass, i
         </div>
 
         {/* 4 Staggered Class Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-start">
           {classesData.map((item) => (
             <div
               key={item.id}
@@ -119,7 +119,7 @@ export const ClassesSection: React.FC<ClassesSectionProps> = ({ onSelectClass, i
               {/* Card Label & Action Button Row */}
               <div className="flex items-center justify-between pt-4 px-1">
                 <h3
-                  className="font-display font-bold text-lg md:text-xl tracking-tight group-hover:text-[#ff5520] transition-colors"
+                  className="font-display font-bold text-[13px] sm:text-lg md:text-xl tracking-tight leading-tight group-hover:text-[#ff5520] transition-colors"
                   style={{ color: isDark ? '#ffffff' : '#111827' }}
                 >
                   {item.title}

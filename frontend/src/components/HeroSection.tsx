@@ -96,7 +96,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
             <span
               className="font-display font-black leading-none tracking-tighter absolute left-[-5%] whitespace-nowrap"
               style={{
-                fontSize: 'clamp(200px, 35vw, 600px)',
+                fontSize: 'clamp(120px, 35vw, 600px)',
                 color: 'rgba(255, 140, 55, 0.12)',
               }}
             >
@@ -105,7 +105,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
             <span
               className="font-display font-black leading-none tracking-tighter absolute right-[-5%] whitespace-nowrap"
               style={{
-                fontSize: 'clamp(200px, 35vw, 600px)',
+                fontSize: 'clamp(120px, 35vw, 600px)',
                 color: 'rgba(255, 140, 55, 0.12)',
               }}
             >
@@ -150,15 +150,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
             <div className="max-w-md space-y-5">
               <div className="space-y-0">
                 <h1 className="font-display font-black uppercase leading-[0.95] text-white"
-                  style={{ fontSize: 'clamp(42px, 6vw, 80px)' }}>
+                  style={{ fontSize: 'clamp(34px, 9vw, 80px)' }}>
                   TRAIN INSANE
                 </h1>
                 <h1 className="font-display font-black uppercase leading-[0.95] text-[#ff5520] drop-shadow-[0_4px_20px_rgba(255,85,32,0.5)]"
-                  style={{ fontSize: 'clamp(42px, 6vw, 80px)' }}>
+                  style={{ fontSize: 'clamp(34px, 9vw, 80px)' }}>
                   OR REMAIN
                 </h1>
                 <h1 className="font-display font-black uppercase leading-[0.95] text-white"
-                  style={{ fontSize: 'clamp(42px, 6vw, 80px)' }}>
+                  style={{ fontSize: 'clamp(34px, 9vw, 80px)' }}>
                   THE SAME!
                 </h1>
               </div>
@@ -167,16 +167,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
                 Join The 3Gs Fitness and experience world-class training with three generations of expert coaching. Unlock your potential, break your limits.
               </p>
 
-              <div className="flex flex-wrap gap-3 pt-1">
+              <div className="flex flex-row gap-3 pt-1 w-full max-w-[400px]">
                 <button
                   onClick={onExploreMore}
-                  className="px-7 py-3.5 rounded-none bg-[#ff5520] hover:bg-[#e04414] text-white text-xs font-black uppercase tracking-[0.15em] shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105 active:scale-98 transition-all cursor-pointer"
+                  className="flex-1 px-2 sm:px-7 py-3.5 rounded-none bg-[#ff5520] hover:bg-[#e04414] text-white text-[10px] sm:text-xs font-black uppercase tracking-[0.15em] shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105 active:scale-98 transition-all cursor-pointer text-center"
                 >
                   SEE PLANS
                 </button>
                 <button
                   onClick={scrollToCoaches}
-                  className="px-7 py-3.5 rounded-none border border-white/25 hover:border-white/60 bg-white/5 hover:bg-white/10 text-white text-xs font-black uppercase tracking-[0.15em] transition-all cursor-pointer"
+                  className="flex-1 px-2 sm:px-7 py-3.5 rounded-none border border-white/25 hover:border-white/60 bg-white/5 hover:bg-white/10 text-white text-[10px] sm:text-xs font-black uppercase tracking-[0.15em] transition-all cursor-pointer text-center"
                 >
                   OUR COACHES
                 </button>
