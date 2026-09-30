@@ -29,7 +29,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12">
         
         {/* Massive Vibrant Orange Banner Container */}
-        <div className="relative rounded-[32px] sm:rounded-[40px] overflow-hidden bg-gradient-to-br from-[#ff5e24] via-[#ff5018] to-[#ea3a04] px-6 sm:px-10 md:px-14 py-12 md:py-16 text-white shadow-2xl">
+        <div className="relative rounded-[32px] sm:rounded-[40px] overflow-hidden bg-gradient-to-br from-[#ff5e24] via-[#ff5018] to-[#ea3a04] px-5 sm:px-10 md:px-14 py-8 sm:py-12 md:py-16 text-white shadow-2xl">
           
           {/* Subtle Geometric Angular Facet Overlays */}
           <div className="absolute inset-0 pointer-events-none opacity-20 select-none overflow-hidden">
@@ -43,7 +43,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
 
           <div className="relative z-10">
             {/* Top Bar: Dropdown Selector on Left + Header on Right */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 md:mb-16">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 sm:gap-6 mb-8 sm:mb-12 md:mb-16">
               
               {/* Category Dropdown Selector */}
               <div className="relative">
@@ -90,7 +90,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
             </div>
 
             {/* 3 Pricing Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch mb-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-stretch mb-6 sm:mb-10">
               
               {/* Card 1: ONE DAY PASS */}
               <div
@@ -98,7 +98,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                   setActiveCard('day');
                   onSelectPlan({ name: 'One Day Pass', price: '$15', billing: 'per day' });
                 }}
-                className={`relative rounded-[28px] p-8 flex flex-col justify-between cursor-pointer transition-all duration-300 ${
+                className={`relative rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 flex flex-col justify-between cursor-pointer transition-all duration-300 ${
                   activeCard === 'day'
                     ? 'border-2 border-white bg-white/20 shadow-xl scale-[1.02]'
                     : 'border border-white/40 bg-white/10 hover:bg-white/15'
@@ -106,15 +106,15 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
               >
                 <div>
                   {/* Concentric Circle Icon */}
-                  <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center mb-6">
-                    <div className="w-4 h-4 rounded-full bg-white/90"></div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white flex items-center justify-center mb-4 sm:mb-6">
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white/90"></div>
                   </div>
 
-                  <h3 className="font-display font-black text-xl text-white uppercase tracking-wide mb-3">
+                  <h3 className="font-display font-black text-lg sm:text-xl text-white uppercase tracking-wide mb-2 sm:mb-3">
                     ONE DAY PASS
                   </h3>
 
-                  <div className="font-display font-bold text-2xl text-white mb-4">
+                  <div className="font-display font-bold text-xl sm:text-2xl text-white mb-3 sm:mb-4">
                     $15/Per Day
                   </div>
 
@@ -130,21 +130,21 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                   setActiveCard('monthly');
                   onSelectPlan({ name: 'Monthly Pass', price: '$90', billing: 'per month' });
                 }}
-                className={`relative rounded-[28px] p-8 bg-white text-neutral-900 shadow-2xl flex flex-col justify-between cursor-pointer transition-all duration-300 ${
+                className={`relative rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 bg-white text-neutral-900 shadow-2xl flex flex-col justify-between cursor-pointer transition-all duration-300 ${
                   activeCard === 'monthly' ? 'scale-[1.03] ring-4 ring-white/50' : 'hover:scale-[1.01]'
                 }`}
               >
                 <div>
                   {/* Solid Orange Concentric Target Icon */}
-                  <div className="w-10 h-10 rounded-full border-2 border-[#ff5520] flex items-center justify-center mb-6">
-                    <div className="w-4 h-4 rounded-full bg-[#ff5520]"></div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#ff5520] flex items-center justify-center mb-4 sm:mb-6">
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-[#ff5520]"></div>
                   </div>
 
-                  <h3 className="font-display font-black text-xl text-neutral-900 uppercase tracking-wide mb-3">
+                  <h3 className="font-display font-black text-lg sm:text-xl text-neutral-900 uppercase tracking-wide mb-2 sm:mb-3">
                     MONTHLY PASS
                   </h3>
 
-                  <div className="font-display font-black text-2xl text-neutral-900 mb-4">
+                  <div className="font-display font-black text-xl sm:text-2xl text-neutral-900 mb-3 sm:mb-4">
                     $90/Per month
                   </div>
 
@@ -160,7 +160,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
                   setActiveCard('yearly');
                   onSelectPlan({ name: 'Yearly Pass', price: '$59', billing: 'per month (billed annually)' });
                 }}
-                className={`relative rounded-[28px] p-8 flex flex-col justify-between cursor-pointer transition-all duration-300 ${
+                className={`relative rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 flex flex-col justify-between cursor-pointer transition-all duration-300 ${
                   activeCard === 'yearly'
                     ? 'border-2 border-white bg-white/20 shadow-xl scale-[1.02]'
                     : 'border border-white/40 bg-white/10 hover:bg-white/15'
@@ -168,15 +168,15 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onSelectPlan, is
               >
                 <div>
                   {/* Concentric Circle Icon */}
-                  <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center mb-6">
-                    <div className="w-4 h-4 rounded-full bg-white/90"></div>
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white flex items-center justify-center mb-4 sm:mb-6">
+                    <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white/90"></div>
                   </div>
 
-                  <h3 className="font-display font-black text-xl text-white uppercase tracking-wide mb-3">
+                  <h3 className="font-display font-black text-lg sm:text-xl text-white uppercase tracking-wide mb-2 sm:mb-3">
                     YEARLY PASS
                   </h3>
 
-                  <div className="font-display font-bold text-2xl text-white mb-4">
+                  <div className="font-display font-bold text-xl sm:text-2xl text-white mb-3 sm:mb-4">
                     $59/Per month
                   </div>
 
