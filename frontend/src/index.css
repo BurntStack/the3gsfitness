@@ -1,0 +1,371 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Syne', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #141414;
+    background-color: #fafafa;
+    overflow-x: hidden;
+  }
+}
+
+/* =====================================================
+   LITE MODE — [data-theme="lite"] on <html>
+   Overrides dark sections to a clean, warm-white theme
+   ===================================================== */
+
+/* Smooth transitions for all themed elements */
+[data-theme="lite"] *,
+[data-theme="lite"] *::before,
+[data-theme="lite"] *::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+}
+
+/* ─── Hero Section ─── */
+[data-theme="lite"] #home {
+  background: linear-gradient(to bottom, #f8f5f0, #faf8f4, #f8f5f0) !important;
+  color: #141414 !important;
+}
+
+/* Hide cinematic dark-mode particle layers in lite mode */
+[data-theme="lite"] #home > div[class*="-z-10"]:first-child {
+  opacity: 0.3 !important;
+}
+
+/* Hero title text stays white on the section — flip to dark */
+[data-theme="lite"] #home h1 {
+  color: #141414 !important;
+}
+[data-theme="lite"] #home h1.text-\[\#ff5520\] {
+  color: #ff5520 !important;
+}
+[data-theme="lite"] #home p,
+[data-theme="lite"] #home span:not(.text-\[\#ff5520\]) {
+  color: #4b4b4b !important;
+}
+
+/* Pill tag in Hero */
+[data-theme="lite"] #home .bg-white\/5 {
+  background-color: rgba(0,0,0,0.05) !important;
+  border-color: rgba(0,0,0,0.12) !important;
+}
+
+/* Ghost background orbs — lighter tint in lite mode */
+[data-theme="lite"] .animate-orb-1 {
+  opacity: 0.35 !important;
+}
+[data-theme="lite"] .animate-orb-2 {
+  opacity: 0.2 !important;
+}
+[data-theme="lite"] .animate-orb-3 {
+  opacity: 0.15 !important;
+}
+
+/* Hide beam sweeps & sparks in lite mode (too subtle on white) */
+[data-theme="lite"] .animate-beam-1,
+[data-theme="lite"] .animate-beam-2,
+[data-theme="lite"] .animate-beam-3,
+[data-theme="lite"] .animate-spark-1,
+[data-theme="lite"] .animate-spark-2 {
+  opacity: 0 !important;
+}
+
+/* Bokeh particles — desaturate in lite mode */
+[data-theme="lite"] [class*="animate-bokeh-"] {
+  opacity: 0.25 !important;
+  filter: saturate(0.4) !important;
+}
+
+/* ─── Process Section (dark bg) ─── */
+[data-theme="lite"] section[class*="bg-\[#0c0d12\]"],
+[data-theme="lite"] section[class*="bg-\[#12131a\]"],
+[data-theme="lite"] section[class*="bg-neutral-950"],
+[data-theme="lite"] section[class*="bg-neutral-900"] {
+  background-color: #f2ede8 !important;
+  color: #141414 !important;
+}
+
+/* ─── Pricing Section ─── */
+[data-theme="lite"] #pricing {
+  background-color: #f8f5f0 !important;
+  color: #141414 !important;
+}
+
+/* ─── Reviews Section ─── */
+[data-theme="lite"] #reviews {
+  background-color: #faf8f4 !important;
+  color: #141414 !important;
+}
+
+/* ─── Footer ─── */
+[data-theme="lite"] footer,
+[data-theme="lite"] footer * {
+  background-color: #f0ece5 !important;
+  border-color: rgba(0,0,0,0.1) !important;
+  color: #141414 !important;
+}
+[data-theme="lite"] footer .text-\[\#ff5520\],
+[data-theme="lite"] footer a:hover {
+  color: #ff5520 !important;
+}
+
+/* ─── Generic dark card overrides (coach cards are already light bg-white) ─── */
+[data-theme="lite"] .bg-\[#0c0d12\],
+[data-theme="lite"] .bg-\[#12131a\],
+[data-theme="lite"] .bg-\[#161722\] {
+  background-color: #ffffff !important;
+}
+
+/* Dark gradient strips within sections (e.g. banner) */
+[data-theme="lite"] .bg-gradient-to-r.from-neutral-950,
+[data-theme="lite"] .from-neutral-950.via-neutral-900 {
+  background: linear-gradient(to right, #e8e3da, #ede8e0, #e8e3da) !important;
+  color: #141414 !important;
+}
+
+/* ─── Lite mode scrollbar ─── */
+[data-theme="lite"] ::-webkit-scrollbar-track {
+  background: #f0ece5;
+}
+[data-theme="lite"] ::-webkit-scrollbar-thumb {
+  background: #c9b8a8;
+}
+
+
+
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5520;
+}
+
+/* --- Targeted CSS Animations --- */
+
+/* 1. Layered Geometric Polygon Float Animations (Matching Reference Video) */
+@keyframes float-poly-1 {
+  0%, 100% {
+    transform: rotate(14deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(11deg) translateY(-10px);
+  }
+}
+
+.animate-float-poly-1 {
+  animation: float-poly-1 7s ease-in-out infinite;
+}
+
+@keyframes float-poly-2 {
+  0%, 100% {
+    transform: rotate(-10deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-12deg) translateY(10px);
+  }
+}
+
+.animate-float-poly-2 {
+  animation: float-poly-2 8s ease-in-out infinite;
+}
+
+/* Floating ambient particle drift */
+@keyframes float-drift {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(15deg);
+  }
+}
+
+.animate-float-drift {
+  animation: float-drift 5s ease-in-out infinite;
+}
+
+/* 2. Slow cinematic zoom (Ken Burns effect) */
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08) translate(-0.5%, -0.5%);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 22s ease-in-out infinite alternate;
+}
+
+/* 3. Continuous glowing, expanding box-shadow pulse for Play Button */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 85, 32, 0.75);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(255, 85, 32, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 85, 32, 0);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* 4. Smooth upward float and scale transition for Athlete Images */
+.hero-central-img {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.6s ease;
+}
+
+.hero-central-img:hover {
+  transform: translateY(-8px) scale(1.03);
+  filter: drop-shadow(0 25px 45px rgba(255, 85, 32, 0.25));
+}
+
+/* ====================================================
+   CINEMATIC BACKGROUND MOTION EFFECTS
+   Inspired by fitness promo video reference atmosphere
+   ==================================================== */
+
+/* Bokeh / Floating Light Particle */
+@keyframes bokeh-float {
+  0%   { transform: translateY(0px) translateX(0px) scale(1);       opacity: 0.12; }
+  25%  { transform: translateY(-35px) translateX(14px) scale(1.3);  opacity: 0.35; }
+  50%  { transform: translateY(-60px) translateX(-10px) scale(0.85); opacity: 0.18; }
+  75%  { transform: translateY(-28px) translateX(22px) scale(1.15); opacity: 0.28; }
+  100% { transform: translateY(0px) translateX(0px) scale(1);       opacity: 0.12; }
+}
+
+.animate-bokeh-1 { animation: bokeh-float 8s ease-in-out infinite; }
+.animate-bokeh-2 { animation: bokeh-float 11s ease-in-out infinite 2s; }
+.animate-bokeh-3 { animation: bokeh-float 9s ease-in-out infinite 4s; }
+.animate-bokeh-4 { animation: bokeh-float 13s ease-in-out infinite 1s; }
+.animate-bokeh-5 { animation: bokeh-float 7s ease-in-out infinite 3.5s; }
+.animate-bokeh-6 { animation: bokeh-float 10s ease-in-out infinite 6s; }
+.animate-bokeh-7 { animation: bokeh-float 14s ease-in-out infinite 5s; }
+.animate-bokeh-8 { animation: bokeh-float 6.5s ease-in-out infinite 0.8s; }
+
+/* Diagonal Light Beam Sweep */
+@keyframes beam-sweep {
+  0%   { transform: translateX(-120%) skewX(-25deg); opacity: 0; }
+  10%  { opacity: 0.06; }
+  90%  { opacity: 0.03; }
+  100% { transform: translateX(220%) skewX(-25deg); opacity: 0; }
+}
+
+.animate-beam-1 { animation: beam-sweep 10s linear infinite; }
+.animate-beam-2 { animation: beam-sweep 14s linear infinite 5s; }
+.animate-beam-3 { animation: beam-sweep 18s linear infinite 10s; }
+
+/* Ambient Radial Glow Pulse */
+@keyframes glow-pulse-ambient {
+  0%, 100% { opacity: 0.10; transform: scale(1); }
+  50%       { opacity: 0.28; transform: scale(1.2); }
+}
+
+.animate-glow-pulse-1 { animation: glow-pulse-ambient 7s ease-in-out infinite; }
+.animate-glow-pulse-2 { animation: glow-pulse-ambient 9s ease-in-out infinite 3.5s; }
+.animate-glow-pulse-3 { animation: glow-pulse-ambient 11s ease-in-out infinite 1.5s; }
+
+/* Atmospheric Haze Drift */
+@keyframes haze-drift {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg);    opacity: 0.04; }
+  33%  { transform: translateX(40px) translateY(-25px) rotate(6deg);  opacity: 0.09; }
+  66%  { transform: translateX(-20px) translateY(-50px) rotate(-4deg); opacity: 0.05; }
+  100% { transform: translateX(0) translateY(0) rotate(0deg);    opacity: 0.04; }
+}
+
+.animate-haze-1 { animation: haze-drift 20s ease-in-out infinite; }
+.animate-haze-2 { animation: haze-drift 28s ease-in-out infinite 8s; }
+
+/* Energy Spark / Strobe Flash */
+@keyframes energy-spark {
+  0%, 88%, 100% { opacity: 0; }
+  90%, 94%      { opacity: 0.7; }
+  92%           { opacity: 0.2; }
+}
+
+.animate-spark-1 { animation: energy-spark 6s linear infinite; }
+.animate-spark-2 { animation: energy-spark 8s linear infinite 3s; }
+
+/* Slow-drifting Large Gradient Orb */
+@keyframes orb-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  25%  { transform: translate(50px, -35px) scale(1.1); }
+  50%  { transform: translate(25px, -70px) scale(0.92); }
+  75%  { transform: translate(-25px, -35px) scale(1.07); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.animate-orb-1 { animation: orb-drift 22s ease-in-out infinite; }
+.animate-orb-2 { animation: orb-drift 30s ease-in-out infinite 10s; }
+.animate-orb-3 { animation: orb-drift 17s ease-in-out infinite 4s; }
+
+/* ====================================================
+   DARK HERO: CrossFit-style Smoke / Fog Effects
+   ==================================================== */
+
+@keyframes smoke-rise-left {
+  0%   { transform: translateY(0) translateX(0) scale(1) rotate(0deg);   opacity: 0; }
+  10%  { opacity: 0.55; }
+  50%  { transform: translateY(-80px) translateX(30px) scale(1.3) rotate(8deg);  opacity: 0.6; }
+  90%  { opacity: 0.3; }
+  100% { transform: translateY(-180px) translateX(60px) scale(1.6) rotate(15deg); opacity: 0; }
+}
+
+@keyframes smoke-rise-right {
+  0%   { transform: translateY(0) translateX(0) scale(1) rotate(0deg);    opacity: 0; }
+  10%  { opacity: 0.5; }
+  50%  { transform: translateY(-90px) translateX(-30px) scale(1.4) rotate(-8deg);  opacity: 0.55; }
+  90%  { opacity: 0.25; }
+  100% { transform: translateY(-200px) translateX(-50px) scale(1.7) rotate(-14deg); opacity: 0; }
+}
+
+.smoke-puff-l-1 { animation: smoke-rise-left 9s ease-in-out infinite; }
+.smoke-puff-l-2 { animation: smoke-rise-left 12s ease-in-out infinite 3s; }
+.smoke-puff-l-3 { animation: smoke-rise-left 8s ease-in-out infinite 6s; }
+.smoke-puff-l-4 { animation: smoke-rise-left 14s ease-in-out infinite 1.5s; }
+
+.smoke-puff-r-1 { animation: smoke-rise-right 10s ease-in-out infinite 1s; }
+.smoke-puff-r-2 { animation: smoke-rise-right 13s ease-in-out infinite 4s; }
+.smoke-puff-r-3 { animation: smoke-rise-right 8.5s ease-in-out infinite 7s; }
+.smoke-puff-r-4 { animation: smoke-rise-right 15s ease-in-out infinite 2s; }
+
+/* Slow BG text drift */
+@keyframes bg-text-drift {
+  0%, 100% { letter-spacing: -0.02em; opacity: 0.10; }
+  50%       { letter-spacing: 0.01em;  opacity: 0.16; }
+}
+.animate-bg-text { animation: bg-text-drift 12s ease-in-out infinite; }
+
+/* Stats count-up shimmer */
+@keyframes stat-glow {
+  0%, 100% { text-shadow: none; }
+  50%       { text-shadow: 0 0 20px rgba(255,85,32,0.5); }
+}
+.animate-stat-glow { animation: stat-glow 3s ease-in-out infinite; }
+

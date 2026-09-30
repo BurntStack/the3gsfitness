@@ -1,0 +1,6 @@
+{
+  "name": "the3gsfitness",
+  "description": "High-performance gym and wellness facility offering personal training, outdoor classes, and elite coaching.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
