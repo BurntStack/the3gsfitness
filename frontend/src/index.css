@@ -47,7 +47,7 @@
   color: #ff5520 !important;
 }
 [data-theme="lite"] #home p,
-[data-theme="lite"] #home span:not(.text-\[\#ff5520\]) {
+[data-theme="lite"] #home span:not(.text-\[\#ff5520\]):not(.bg-3g-text) {
   color: #4b4b4b !important;
 }
 

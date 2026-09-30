@@ -94,7 +94,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-[1] overflow-hidden">
           <div className="relative w-full h-full flex items-center justify-center">
             <span
-              className="font-display font-black leading-none tracking-tighter absolute left-[-5%] whitespace-nowrap"
+              className="bg-3g-text font-display font-black leading-none tracking-tighter absolute left-[-5%] whitespace-nowrap"
               style={{
                 fontSize: 'clamp(120px, 35vw, 600px)',
                 color: 'rgba(255, 140, 55, 0.12)',
@@ -103,7 +103,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
               3G
             </span>
             <span
-              className="font-display font-black leading-none tracking-tighter absolute right-[-5%] whitespace-nowrap"
+              className="bg-3g-text font-display font-black leading-none tracking-tighter absolute right-[-5%] whitespace-nowrap"
               style={{
                 fontSize: 'clamp(120px, 35vw, 600px)',
                 color: 'rgba(255, 140, 55, 0.12)',
@@ -129,7 +129,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
           <img
             src="/hero/new-dark-athlete.png"
             alt="Athlete — The 3Gs Fitness"
-            className="relative h-[60vh] md:h-[80vh] max-h-[750px] w-auto object-contain object-bottom md:object-right-bottom select-none mb-0 md:mb-4 lg:mb-6 mr-0 md:mr-8 lg:mr-12 opacity-40 md:opacity-100 translate-x-0 md:-translate-x-[10%]"
+            className="relative h-[50vh] md:h-[80vh] max-h-[750px] w-auto object-contain object-bottom md:object-right-bottom select-none mb-0 md:mb-4 lg:mb-6 mr-0 md:mr-8 lg:mr-12 opacity-40 md:opacity-100 translate-x-0 md:-translate-x-[10%]"
             style={{
               filter: 'drop-shadow(-20px 30px 45px rgba(0,0,0,0.85)) contrast(1.06) brightness(1.02)',
               imageRendering: '-webkit-optimize-contrast',
@@ -263,11 +263,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
       {/* ── BACKGROUND TYPOGRAPHY: 3Gs ── */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-[1] overflow-hidden">
         <div className="relative w-full h-full flex items-center justify-center">
-          <span className="font-display font-black text-neutral-200/50 leading-none tracking-tighter absolute left-[-5%] whitespace-nowrap"
+          <span className="bg-3g-text font-display font-black text-neutral-200/50 leading-none tracking-tighter absolute left-[-5%] whitespace-nowrap"
             style={{ fontSize: 'clamp(200px, 35vw, 600px)' }}>
             3G
           </span>
-          <span className="font-display font-black text-neutral-200/50 leading-none tracking-tighter absolute right-[-5%] whitespace-nowrap"
+          <span className="bg-3g-text font-display font-black text-neutral-200/50 leading-none tracking-tighter absolute right-[-5%] whitespace-nowrap"
             style={{ fontSize: 'clamp(200px, 35vw, 600px)' }}>
             S
           </span>
@@ -286,7 +286,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
         <img
           src="/hero/new-dark-athlete.png"
           alt="Athlete — The 3Gs Fitness"
-          className="relative h-[60vh] md:h-[80vh] max-h-[750px] w-auto object-contain object-bottom md:object-right-bottom select-none mb-0 md:mb-4 lg:mb-6 mr-0 md:mr-8 lg:mr-12 opacity-30 md:opacity-100 translate-x-0 md:-translate-x-[10%] transition-transform duration-700 hover:scale-[1.02]"
+          className="relative h-[50vh] md:h-[80vh] max-h-[750px] w-auto object-contain object-bottom md:object-right-bottom select-none mb-0 md:mb-4 lg:mb-6 mr-0 md:mr-8 lg:mr-12 opacity-30 md:opacity-100 translate-x-0 md:-translate-x-[10%] transition-transform duration-700 hover:scale-[1.02]"
           style={{
             filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.18)) contrast(1.06) brightness(1.02)',
             imageRendering: '-webkit-optimize-contrast',
