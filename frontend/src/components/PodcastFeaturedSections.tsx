@@ -841,11 +841,11 @@ export const WorkWithUsStrip: React.FC<{
         </div>
 
         {/* 3 Prompt Cards Routing Directly to Work With Us Paths */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="flex sm:grid sm:grid-cols-3 gap-4 sm:gap-6 overflow-x-auto pb-4 sm:pb-0 snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {/* Card 1: Be a Guest */}
           <div
             onClick={() => onNavigate('work-with-us')}
-            className={`p-7 rounded-3xl border transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col justify-between ${
+            className={`min-w-[85vw] sm:min-w-0 flex-none snap-center p-7 rounded-3xl border transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col justify-between ${
               isDark
                 ? 'bg-neutral-900/60 hover:bg-neutral-900 border-white/10 hover:border-[#ff5520]'
                 : 'bg-neutral-50 hover:bg-white border-neutral-200 hover:border-[#ff5520] shadow-md'
@@ -881,7 +881,7 @@ export const WorkWithUsStrip: React.FC<{
           {/* Card 2: Partner / Sponsor */}
           <div
             onClick={() => onNavigate('work-with-us')}
-            className={`p-7 rounded-3xl border transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col justify-between ${
+            className={`min-w-[85vw] sm:min-w-0 flex-none snap-center p-7 rounded-3xl border transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col justify-between ${
               isDark
                 ? 'bg-neutral-900/60 hover:bg-neutral-900 border-white/10 hover:border-[#ff5520]'
                 : 'bg-neutral-50 hover:bg-white border-neutral-200 hover:border-[#ff5520] shadow-md'
@@ -917,7 +917,7 @@ export const WorkWithUsStrip: React.FC<{
           {/* Card 3: Train with a Coach */}
           <div
             onClick={() => onNavigate('work-with-us')}
-            className={`p-7 rounded-3xl border transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col justify-between ${
+            className={`min-w-[85vw] sm:min-w-0 flex-none snap-center p-7 rounded-3xl border transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col justify-between ${
               isDark
                 ? 'bg-neutral-900/60 hover:bg-neutral-900 border-white/10 hover:border-[#ff5520]'
                 : 'bg-neutral-50 hover:bg-white border-neutral-200 hover:border-[#ff5520] shadow-md'
