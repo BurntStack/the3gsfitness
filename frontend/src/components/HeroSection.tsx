@@ -138,7 +138,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
         </div>
 
         {/* ── CONTENT LAYER ── */}
-        <div className="relative z-[10] flex flex-col md:justify-between flex-1 px-6 md:px-14 lg:px-20 pb-12 md:pb-24 pt-24 md:pt-8">
+        <div className="relative z-[10] flex flex-col md:justify-between flex-1 px-6 md:px-14 lg:px-20 pb-12 md:pb-24 pt-8 md:pt-12">
 
           {/* Top spacer (hidden on mobile to reduce top black space) */}
           <div className="hidden md:block" />
@@ -286,7 +286,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
         <img
           src="/hero/new-dark-athlete.png"
           alt="Athlete — The 3Gs Fitness"
-          className="relative h-[60vh] md:h-[80vh] max-h-[750px] w-auto object-contain object-bottom md:object-right-bottom select-none mb-0 md:mb-4 lg:mb-6 mr-0 md:mr-8 lg:mr-12 opacity-40 md:opacity-100 translate-x-0 md:-translate-x-[10%] transition-transform duration-700 hover:scale-[1.02]"
+          className="relative h-[60vh] md:h-[80vh] max-h-[750px] w-auto object-contain object-bottom md:object-right-bottom select-none mb-0 md:mb-4 lg:mb-6 mr-0 md:mr-8 lg:mr-12 opacity-30 md:opacity-100 translate-x-0 md:-translate-x-[10%] transition-transform duration-700 hover:scale-[1.02]"
           style={{
             filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.18)) contrast(1.06) brightness(1.02)',
             imageRendering: '-webkit-optimize-contrast',
@@ -298,13 +298,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
       </div>
 
       {/* ── CONTENT LAYER ── */}
-      <div className="relative z-[10] flex flex-col md:justify-between flex-1 px-6 md:px-14 lg:px-20 pb-12 md:pb-24 pt-24 md:pt-8">
+      <div className="relative z-[10] flex flex-col md:justify-between flex-1 px-6 md:px-14 lg:px-20 pb-12 md:pb-24 pt-8 md:pt-12">
 
         {/* Top spacer (hidden on mobile to reduce top black space) */}
         <div className="hidden md:block" />
 
         {/* Bottom: two-column layout */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 mt-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-10 md:mt-auto">
 
           {/* Bottom-Left: Headline + CTAs */}
           <div className="max-w-md space-y-5">
