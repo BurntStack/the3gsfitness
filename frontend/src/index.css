@@ -87,9 +87,9 @@
 }
 
 /* ─── Generic dark card overrides (coach cards are already light bg-white) ─── */
-[data-theme="lite"] .bg-\[#0c0d12\],
-[data-theme="lite"] .bg-\[#12131a\],
-[data-theme="lite"] .bg-\[#161722\] {
+[data-theme="lite"] [class*="bg-[#0c0d12]"],
+[data-theme="lite"] [class*="bg-[#12131a]"],
+[data-theme="lite"] [class*="bg-[#161722]"] {
   background-color: #ffffff !important;
 }
 

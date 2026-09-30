@@ -237,6 +237,5 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
         {/* Bottom gradient fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#080808] to-transparent z-[5] pointer-events-none" />
       </section>
-    </section>
   );
 };
