@@ -148,6 +148,7 @@ export default function App() {
             <HeroSection
               onOpenVideo={handleOpenHeroVideo}
               onExploreMore={scrollToPricing}
+              onOpenCoaches={() => handleNavigate('coaches')}
               isDark={isDark}
             />
 

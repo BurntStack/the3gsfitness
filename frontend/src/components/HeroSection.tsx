@@ -4,6 +4,7 @@ import { Play, ArrowRight, Instagram, Sparkles, ChevronRight } from 'lucide-reac
 interface HeroSectionProps {
   onOpenVideo: () => void;
   onExploreMore: () => void;
+  onOpenCoaches?: () => void;
   isDark?: boolean;
 }
 
@@ -65,7 +66,12 @@ const RoundedHexagon: React.FC<{
   </svg>
 );
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExploreMore, isDark = true }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({
+  onOpenVideo,
+  onExploreMore,
+  onOpenCoaches,
+  isDark = true,
+}) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   // Auto-cycle through the 3 real Instagram post photos every 5.5s
@@ -78,7 +84,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
 
   const currentSlide = heroSlides[activeSlideIndex];
 
-  const scrollToCoaches = () => {
+  const handleCoachesClick = () => {
+    if (onOpenCoaches) {
+      onOpenCoaches();
+      return;
+    }
     const el = document.getElementById('coaches');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
@@ -204,7 +214,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
                 SEE PLANS
               </button>
               <button
-                onClick={scrollToCoaches}
+                onClick={handleCoachesClick}
                 className={`flex-1 px-2 sm:px-7 py-3.5 rounded-none border text-[10px] sm:text-xs font-black uppercase tracking-[0.15em] transition-all cursor-pointer text-center ${
                   isDark
                     ? 'border-white/25 hover:border-white/60 bg-white/5 hover:bg-white/10 text-white'
@@ -242,7 +252,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVideo, onExplore
 
             {/* Founder avatars + rating */}
             <div
-              onClick={scrollToCoaches}
+              onClick={handleCoachesClick}
               className={`flex items-center gap-3 rounded-xl px-4 py-3 cursor-pointer transition-all hover:-translate-y-0.5 ${
                 isDark
                   ? 'bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 text-white'
