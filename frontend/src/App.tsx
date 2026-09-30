@@ -141,7 +141,7 @@ export default function App() {
       />
 
       {/* Main Page Content */}
-      <main className="flex-1 w-full">
+      <main className="flex-1 w-full pb-16 md:pb-0">
         {currentPage === 'home' && (
           <>
             {/* 1. Original Landing Page Hero with Athlete Cutout & 3GS Watermark */}
