@@ -28,36 +28,6 @@
   transition-timing-function: ease;
 }
 
-/* ─── Hero Section ─── */
-[data-theme="lite"] #home {
-  background: linear-gradient(to bottom, #f8f5f0, #faf8f4, #f8f5f0) !important;
-  color: #141414 !important;
-}
-
-/* Hide cinematic dark-mode particle layers in lite mode */
-[data-theme="lite"] #home > div[class*="-z-10"]:first-child {
-  opacity: 0.3 !important;
-}
-
-/* Hero title text stays white on the section — flip to dark */
-[data-theme="lite"] #home h1 {
-  color: #141414 !important;
-}
-[data-theme="lite"] #home h1.text-\[\#ff5520\] {
-  color: #ff5520 !important;
-}
-[data-theme="lite"] #home p,
-[data-theme="lite"] #home span:not(.text-\[\#ff5520\]):not(.bg-3g-text) {
-  color: #4b4b4b !important;
-}
-
-/* Pill tag in Hero */
-[data-theme="lite"] #home .bg-white\/5 {
-  background-color: rgba(0,0,0,0.05) !important;
-  border-color: rgba(0,0,0,0.12) !important;
-}
-
-/* Ghost background orbs — lighter tint in lite mode */
 [data-theme="lite"] .animate-orb-1 {
   opacity: 0.35 !important;
 }
